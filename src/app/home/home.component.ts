@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent  {
+  /*TODO bolar uma forma de pegar o estado do sidebar para alterar de um botao por aqui*/ 
+  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  
   showFiller = true;
   ngOnInit() {
-    console.log('foii');
+    console.log(this.sidenav);
+
     
   }
 

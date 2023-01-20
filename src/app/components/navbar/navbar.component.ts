@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import {FlatTreeControl} from '@angular/cdk/tree';
-
+import { MatSidenav } from '@angular/material/sidenav';
+import {BreakpointObserver} from '@angular/cdk/layout';
 export interface Section {
   name: string;
   updated: Date;
@@ -100,9 +101,28 @@ export class NavbarComponent {
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  constructor() {
+
+
+  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+
+  /*alert */
+  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  
+  constructor(private observer: BreakpointObserver) {
     this.dataSource.data = TREE_DATA;
   }
 
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+  ngAfterViewInit() {
+    this.observer.observe([
+      '(max-width: 800px)'
+    ]).subscribe((res) => {
+      if(res.matches) {
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      } else {
+        this.sidenav.mode = 'side';
+        this.sidenav.open();
+      }
+    })
+  }
 }
