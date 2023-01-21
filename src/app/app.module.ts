@@ -1,3 +1,4 @@
+import { MachineDetailsModule } from './machine-details/machine-details.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,14 +15,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MachineDetailsPipe } from './machine-details.pipe';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    MachineDetailsPipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatCardModule,
     MatTreeModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MachineDetailsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

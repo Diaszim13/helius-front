@@ -24,10 +24,10 @@ export class HomeComponent  {
   ]
 
   cards = [
-    {title: 'maquina 1', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf'},
-    {title: 'maquina 1', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf'},
-    {title: 'maquina 1', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf'},
-    {title: 'maquina 1', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf'},
-    {title: 'maquina 1', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf'},
+    {title: 'Embaladoras', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf', img: '../../assets/images/image5.png'},
+    {title: 'Prensas', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf',img: '../../assets/images/image6.png'},
+    {title: 'Cortes', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf', img: '../../assets/images/image7.png'},
+    {title: 'Conformação', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf', img: '../../assets/images/image4.png'},
+    {title: 'Tinturaria', text: 'sfjasldkffksdajf klskladfjaklsdfksfdjkl aklsdjf klasjfdkldasjfklsdjf', img: '../../assets/images/image9.png'},
   ]
 }

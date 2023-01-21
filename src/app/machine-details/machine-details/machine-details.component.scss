@@ -1,0 +1,30 @@
+@import '../../utils/_variables';
+
+.img {
+    width: 550px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.card {
+    background: $background-cards;
+}
+
+mat-card {
+    background: $background-cards;
+    padding: 10px;
+    margin: 10px;
+}
+.numbers {
+    position: absolute;
+left: 6.37%;
+right: 33.82%;
+top: 37.98%;
+bottom: 17.05%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 58px;
+}
