@@ -17,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MachineDetailsPipe } from './machine-details.pipe';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MachineDetailsModule
+    MachineDetailsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

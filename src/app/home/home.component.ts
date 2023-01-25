@@ -1,5 +1,8 @@
+import { MachineServiceService } from './../services/machine-service.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Component, ViewChild } from '@angular/core';
+import { machine } from '../interfaces/machine';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +12,31 @@ import { Component, ViewChild } from '@angular/core';
 export class HomeComponent  {
   /*TODO bolar uma forma de pegar o estado do sidebar para alterar de um botao por aqui*/ 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
-  
+  machines: machine[] = [];
+  inativeMachines: machine[] = [];
+  img = '../../assets/images/image5.png';
   showFiller = true;
   ngOnInit() {
-    console.log(this.sidenav);
-
-    
+    this.getMachinesList();
+    this.getInativeMachines();
+    console.log(this.inativeMachines);
   }
 
+  constructor(private service: MachineServiceService) {}
+  async getMachinesList() {
+    (await this.service.getMachines()).subscribe(res => {
+      console.log(res.machines);
+      this.machines = res.machines;
+    });      
+  }
+
+  async getInativeMachines() {
+    (await this.service.getInativeMachines()).subscribe(res => {
+      console.log('res: ' + res.machines);
+      
+      this.inativeMachines = res.machines;
+    })
+  }
   links = [
     {name: 'deshboard', link: '/tesate'},
     {name: 'deshboard', link: '/tesate'},
