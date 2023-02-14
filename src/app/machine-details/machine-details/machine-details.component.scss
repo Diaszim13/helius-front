@@ -6,14 +6,17 @@
     border-radius: 5px;
 }
 
-.card {
-    background: $background-cards;
-}
 
 mat-card {
     background: $background-cards;
     padding: 10px;
     margin: 10px;
+}
+
+.card {
+    border: none;
+    background-color: rgba(30, 30, 36, 0.89);
+    color: aliceblue;
 }
 .numbers {
     position: absolute;

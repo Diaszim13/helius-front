@@ -47,6 +47,7 @@ interface ExampleFlatNode {
 
 
 export class NavbarComponent {
+  showSubmenu = false;
   showFiller = true;
   links = [
     {name: 'deshboard', link: '/tesate'},
@@ -113,16 +114,16 @@ export class NavbarComponent {
   }
 
   ngAfterViewInit() {
-    this.observer.observe([
-      '(max-width: 800px)'
-    ]).subscribe((res) => {
-      if(res.matches) {
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
-      } else {
-        this.sidenav.mode = 'side';
-        this.sidenav.open();
-      }
-    })
+    // this.observer.observe([
+    //   '(max-width: 800px)'
+    // ]).subscribe((res) => {
+    //   if(res.matches) {
+    //     this.sidenav.mode = 'over';
+    //     this.sidenav.close();
+    //   } else {
+    //     this.sidenav.mode = 'side';
+    //     this.sidenav.open();
+    //   }
+    // })
   }
 }

@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class MachineDetailsComponent {
   //TODO fazer a tela de detalhes descentemente.
   // TODO PRECISA AJEITAR PARA PEGAR OS DADOS
+
+  
 }

@@ -2,7 +2,6 @@ import { MachineServiceService } from './../services/machine-service.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Component, ViewChild } from '@angular/core';
 import { machine } from '../interfaces/machine';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -18,14 +17,14 @@ export class HomeComponent  {
   showFiller = true;
   ngOnInit() {
     this.getMachinesList();
-    this.getInativeMachines();
+    this.getInativeMachines(); 
     console.log(this.inativeMachines);
   }
 
   constructor(private service: MachineServiceService) {}
   async getMachinesList() {
     (await this.service.getMachines()).subscribe(res => {
-      console.log(res.machines);
+      console.table(res.machines);
       this.machines = res.machines;
     });      
   }

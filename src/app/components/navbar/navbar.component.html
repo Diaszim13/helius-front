@@ -1,32 +1,72 @@
-  <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
-      <img src="../../../assets/images/navbarimg.png" class="avatar mat-elevation-z8" alt="">
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <img
+      src="../../../assets/images/navbarimg.png"
+      class="avatar mat-elevation-z8"
+      alt=""
+    />
 
-      <h4 class="name">Atlas eletrodomesticos</h4>
-      <p class="designation">CNPJ: 129313981283912</p>
+    <h4 class="name">Atlas eletrodomesticos</h4>
+    <p class="designation">CNPJ: 129313981283912</p>
 
-      <mat-divider></mat-divider>
-      <button mat-button class="menu-button">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
     </button>
-      <button mat-button class="menu-button">
-          <mat-icon>person</mat-icon>
-          <span>Profile</span>
-      </button>
-      <button mat-button class="menu-button">
-          <mat-icon>info</mat-icon>
-          <span>About</span>
-      </button>
+    <mat-list>
+      <mat-list-item>
+        <button
+          mat-button
+          (click)="showSubmenu = !showSubmenu"
+        >
+          <mat-icon class="menu-button" [ngClass]="{ rotated: showSubmenu }"
+            >keyboard_arrow_up</mat-icon
+            >
+            <span>Menu</span>
+        </button>
+      </mat-list-item>
+      <div class="submenu" [ngClass]="{ expanded: showSubmenu }">
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Embaladoras</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Prensas</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Tinturaria</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Cortes</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Conformação</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Dobragem</span>
+        </mat-list-item>
+      </div>
+    </mat-list>
+    <mat-divider></mat-divider>
 
-      <mat-divider></mat-divider>
-
-      <button mat-button class="menu-button">
-          <mat-icon>help</mat-icon>
-          <span>Help</span>
-      </button>
-    </mat-sidenav>
-    <mat-sidenav-content>
-
-    </mat-sidenav-content>
+    <!-- <button mat-button class="menu-button">
+      <mat-icon>Departamentos</mat-icon>
+      <span>Help</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>Colaboradores</mat-icon>
+      <span>Help</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>Notificações</mat-icon>
+      <span>Help</span>
+    </button> -->
+  </mat-sidenav>
+  <mat-sidenav-content> </mat-sidenav-content>
 </mat-sidenav-container>

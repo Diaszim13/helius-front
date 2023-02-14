@@ -1,11 +1,6 @@
 @import '../../utils/__variables.scss';
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    }
-    #wrapper{
+    #rodape{
     min-height: 100%;
     position: relative;
     }
@@ -13,6 +8,7 @@ html, body {
       /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
     padding-bottom: 100px;
     }
+    
     footer{
         background: $background-footer;
         width: 100%;
