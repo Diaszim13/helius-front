@@ -4,13 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { userRoleGuard } from './user-role.guard';
+import { Role } from './role';
 
 /* TODO fazer um esquema de rotas descente*/
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
 
   {
-    path: 'machine', component: MachineDetailsComponent
+    path: 'machine',
+    component: MachineDetailsComponent,
+    canActivate: [userRoleGuard],
+    data: {roles: [Role.ADMIN]}
   },
   {
     path: 'cadastro', component: CadastroComponent
