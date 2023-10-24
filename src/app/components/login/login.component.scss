@@ -1,0 +1,89 @@
+@import "../../utils/__variables.scss";
+
+.login-container {
+  background-image: url("https://via.placeholder.com/1500x1000");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-card {
+    background-color: #fff;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    .login-avatar {
+      margin-bottom: 20px;
+      img {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+      }
+      .img-avatar {
+        margin: 0 auto !important;
+        align-items: center !important;
+    }
+    }
+
+    .login-form {
+      width: 100%;
+
+      h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+          margin-bottom: 20px;
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: "Helvetica Neue", sans-serif;
+
+            &:focus {
+              outline: none;
+              border-color: #007bff;
+            }
+          }
+        }
+
+        button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

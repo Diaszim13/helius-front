@@ -36,6 +36,7 @@ export class HomeComponent  {
       this.inativeMachines = res.machines;
     })
   }
+  
   links = [
     {name: 'deshboard', link: '/tesate'},
     {name: 'deshboard', link: '/tesate'},

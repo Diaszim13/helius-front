@@ -18,6 +18,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MachineDetailsPipe } from './machine-details.pipe';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { TensorFlowComponent } from './tensor-flow/tensor-flow.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     NavbarComponent,
-    MachineDetailsPipe
+    MachineDetailsPipe,
+    LoginComponent,
+    CadastroComponent,
+    TensorFlowComponent
   ],
   imports: [
     BrowserModule,
